@@ -171,14 +171,24 @@ Execution Policies:
 In PowerShell, you may encounter execution policy restrictions that prevent scripts from running. You need to set the execution policy appropriately (e.g., using Set-ExecutionPolicy Unrestricted -Scope Process) to allow the execution of Activate.ps1.
 
 ## **License**
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+📜 Copyright & Usage Disclaimer
+© 2026 Krish Gupta. All rights reserved.
+This project is the sole property of the developer.
+Unauthorized copying, modification, redistribution, or commercial use of this project (in whole or in part) is strictly prohibited without explicit permission from the developer.
+If you wish to:
+Use this project
+Modify it
+Redistribute it
+Include it in your own work
+You must contact the developer first for permission.
+📩 Contact Details
+Telegram: https://t.me/KT777mia
+Email: krishg1234567890@gmail.com
 ```
 
 ---
+## 💰 Help Developer by Donating
+  [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/spookistud) [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/Spookistud) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/Putin) 
 
-### Explanation:
-1. **Markdown Formatting**: The code includes headers, lists, and code blocks (` ```bash ` and ` ```python `) for clarity.
-2. **Troubleshooting Virtual Environment**: Added steps to resolve issues with locked environments.
-3. **Ready for GitHub**: The content is now GitHub-ready and can be directly used as `README.md`.
-
-Let me know if you need further modifications!
