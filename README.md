@@ -174,8 +174,10 @@ In PowerShell, you may encounter execution policy restrictions that prevent scri
 
 
 📜 Copyright & Usage Disclaimer
+
 © 2026 Krish Gupta. All rights reserved.
 This project is the sole property of the developer.
+
 Unauthorized copying, modification, redistribution, or commercial use of this project (in whole or in part) is strictly prohibited without explicit permission from the developer.
 If you wish to:
 Use this project
@@ -183,12 +185,16 @@ Modify it
 Redistribute it
 Include it in your own work
 You must contact the developer first for permission.
+
 📩 Contact Details
 Telegram: https://t.me/KT777mia
 Email: krishg1234567890@gmail.com
-```
 
----
+
+
+
+
 ## 💰 Help Developer by Donating
   [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/spookistud) [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/Spookistud) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/Putin) 
-
+  
+```
