@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Live Dashboard - Phishing Detector</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;padding:20px}
+    #stats{margin-top:10px}
+  </style>
+</head>
+<body>
+  <h1>Live Dashboard</h1>
+  <canvas id="chart" width="800" height="300"></canvas>
+  <div id="stats">
+    <strong>Last update:</strong> <span id="last">—</span>
+    &nbsp;|&nbsp; <strong>Total scanned:</strong> <span id="total">0</span>
+    &nbsp;|&nbsp; <strong>Phishing:</strong> <span id="phishing">0</span>
+    &nbsp;|&nbsp; <strong>Rate:</strong> <span id="rate">0</span>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('chart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Phishing rate',
+          data: [],
+          borderColor: 'rgb(255,99,132)',
+          tension: 0.2,
+          fill: false
+        }]
+      },
+      options: {
+        scales: { y: { min: 0, max: 1 } }
+      }
+    });
+
+    async function fetchStats(){
+      try{
+        const res = await fetch('/stats');
+        const j = await res.json();
+        const t = j.time;
+        const rate = j.phishing_rate;
+        chart.data.labels.push(t);
+        chart.data.datasets[0].data.push(rate);
+        if(chart.data.labels.length>30){ chart.data.labels.shift(); chart.data.datasets[0].data.shift(); }
+        chart.update();
+        document.getElementById('last').textContent = t;
+        document.getElementById('total').textContent = j.total;
+        document.getElementById('phishing').textContent = j.phishing;
+        document.getElementById('rate').textContent = rate;
+      }catch(e){ console.error(e); }
+    }
+
+    // initial fetch and poll every 5 seconds
+    fetchStats();
+    setInterval(fetchStats, 5000);
+  </script>
+</body>
+</html>
