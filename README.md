@@ -34,7 +34,7 @@ This project detects phishing emails using machine learning. It involves several
 
 ---
 
-## **Technologies Used**
+## **Technologies Used tools**
 - **Python**: Programming language.
 - **Scikit-learn**: Library for machine learning algorithms.
 - **Pandas**: Data manipulation and analysis.
