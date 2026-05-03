@@ -1,4 +1,5 @@
 text,label
+<<<<<<< HEAD
 "Dear Jordan, your subscription has been successfully renewed. Thank you for your continued support.",0
 "Dear Casey, thank you for your purchase. Your order will be shipped soon.",0
 Congratulations! You've won a $3000 gift card. Click here to claim your prize.,1
@@ -1999,3 +2000,9 @@ Your payment has been declined. Update your billing information to continue usin
 Your subscription is about to expire. Renew now to continue enjoying our services.,1
 "Hi John, just a reminder about the project deadline next Friday. Let's ensure everything is on track.",0
 Your payment has been declined. Update your billing information to continue using our service.,1
+=======
+"Your account has been compromised. Click here to reset your password.",1
+"Meeting tomorrow at 3 PM. Agenda attached.",0
+"Confirm your bank account details to avoid suspension.",1
+"Hello! How are you? Just checking in.",0
+>>>>>>> ab072d9 (Your commit message)
