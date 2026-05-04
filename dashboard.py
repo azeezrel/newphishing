@@ -1,21 +1,25 @@
 ﻿from flask import Flask, render_template_string, request, jsonify
 import pickle
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
 from datetime import datetime
-import json
 import os
-from collections import defaultdict
 
 app = Flask(__name__)
 
-# Load model
 print("Loading model...")
+
+# Load model
+if not os.path.exists('models/phishing_detector.pkl'):
+    print("❌ Model not found! Please run the web app first to create models.")
+    print("Run: py -3.11 connected_webapp.py")
+    exit(1)
+
 with open('models/phishing_detector.pkl', 'rb') as f:
     model = pickle.load(f)
 
 with open('models/vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
+
+print("✅ Model loaded!")
 
 # Statistics storage
 stats = {
@@ -137,6 +141,11 @@ HTML = '''
         .refresh-btn:hover {
             background: #2980b9;
         }
+        .status {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -183,6 +192,10 @@ HTML = '''
             <p style="text-align: center; color: #999;">No scans yet. Test some emails in the web app!</p>
             {% endif %}
         </div>
+        
+        <div class="status">
+            <p>💡 Use the web app at http://127.0.0.1:5000 to test emails</p>
+        </div>
     </div>
 </body>
 </html>
@@ -208,4 +221,4 @@ if __name__ == '__main__':
     print("Dashboard: http://127.0.0.1:5001")
     print("Web App: http://127.0.0.1:5000")
     print("="*50 + "\\n")
-    app.run(debug=True, port=5001)
+    app.run(debug=True, host='127.0.0.1', port=5001)

@@ -37,7 +37,7 @@ This project detects phishing emails using machine learning. It involves several
 ## **Technologies Used tools**
 - **Python**: Programming language.
 - **Scikit-learn**: Library for machine learning algorithms.
-- **Pandas**: Data manipulation and analysis of the model....
+- **Pandas**: Data manipulation and analysis of the model..hhhh..
 - **NumPy**: Library for numerical computing.
 - **Flask** (optional): Can be used to deploy the model as a web service.
 - **Pickle**: For saving and loading the trained model.
